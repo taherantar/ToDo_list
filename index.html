@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://taherantar.github.io/To-Do-List/" />
-    <meta name="description" content=" TO DO LIST" />
-    <meta name="keywords" content="To-do list with HTML, CSS, and JS" />
-    <meta property="fb:admins" content="YourFacebookUsername" />
-    <meta property="og:title" content="TO DO LIST" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://taherantar.github.io/To-Do-List/"
-    />
-    <meta
-      property="og:description"
-      content="To-do list with HTML, CSS, and JS"
-    />
-    <meta
-      property="og:image"
-      content="https://imageio.forbes.com/specials-images/dam/imageserve/1092571024/0x0.jpg?format=jpg&amp;width=1200"
-    />
-    <link rel="icon" type="icon" href="./images/list-check-solid.svg" />
-    <meta name="What's App:image" content="./images/list-check-solid.svg" />
-    <!-- ?Helpers -->
-    <link rel="stylesheet" href="./css/normalize.min.css" />
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <!--? My style  -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>To Do List</title>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-9">
-          <input
-            class="form-control"
-            id="taskInput"
-            type="text"
-            placeholder="Enter task"
-            autofocus
-          />
-        </div>
-        <div class="col-3">
-          <button class="btn btn-primary" id="taskBtn">Add New</button>
-        </div>
-        <h2>
-          <div class="col-12 d-flex justify-content-evenly mt-4">
-            <h2>Number of tasks <span class="badge text-bg-secondary mx-3 p-2" id="tasksCounter">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://taherantar.github.io/To-Do-List/" />
+  <meta name="description" content=" TO DO LIST" />
+  <meta name="keywords" content="To-do list with HTML, CSS, and JS" />
+  <meta property="fb:admins" content="YourFacebookUsername" />
+  <meta property="og:title" content="TO DO LIST" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://taherantar.github.io/To-Do-List/" />
+  <meta property="og:description" content="To-do list with HTML, CSS, and JS" />
+  <meta property="og:image"
+    content="https://imageio.forbes.com/specials-images/dam/imageserve/1092571024/0x0.jpg?format=jpg&amp;width=1200" />
+  <link rel="icon" type="icon" href="./images/list-check-solid.svg" />
+  <meta name="What's App:image" content="./images/list-check-solid.svg" />
+  <!-- ?Helpers -->
+  <link rel="stylesheet" href="./css/normalize.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!--? My style  -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row g-2">
+      <div class="col-sm-12 col-md-9">
+        <input class="form-control" id="taskInput" type="text" placeholder="Enter task" autofocus />
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <button class="btn btn-primary" id="taskBtn">Add New</button>
+      </div>
+      <h2>
+        <div class="col-12 d-flex justify-content-evenly mt-4">
+          <h2>Number of tasks <span class="badge text-bg-secondary mx-3 p-2" id="tasksCounter">
               0
             </span></h2>
-            
-            <h2>Finished Tasks <span class="badge text-bg-secondary mx-3 p-2" id="finishedtasksCounter">
+
+          <h2>Finished Tasks <span class="badge text-bg-secondary mx-3 p-2" id="finishedTasksCounter">
               0
             </span></h2>
-            
-          </div>
-        </h2>
-        <div class="col-12">
-          <ul class="list-group my-4 text-center fw-bold" id="tasks"></ul>
+
         </div>
+      </h2>
+      <div class="col-12">
+        <ul class="list-group my-4 text-center fw-bold" id="tasks"></ul>
       </div>
     </div>
+  </div>
 
-    <script src="./js/main.js"></script>
-  </body>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

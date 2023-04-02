@@ -2,13 +2,13 @@ var task_input = document.querySelector("#taskInput"),
   task_btn = document.querySelector("#taskBtn"),
   tasks = document.querySelector("#tasks"),
   tasks_counter = document.getElementById("tasksCounter"),
-  finished_tasks_counter = document.getElementById("finishedtasksCounter");
+  finished_tasks_counter = document.getElementById("finishedTasksCounter");
 
 task_btn.onclick = function () {
-  if (task_input.value !== "") {
+  if (task_input.value.trim() !== "") {
     addNewTask();
     focusOnInput();
-    finishetask();
+    finishTask();
     deleteTask();
     counter();
   } else {
@@ -17,8 +17,10 @@ task_btn.onclick = function () {
 };
 
 function addNewTask() {
-  tasks.innerHTML += `<li class="list-group-item list-group-item-action list-group-item-warning d-flex justify-content-between">
-  ${task_input.value}<i class="fa-solid fa-trash-can"  style="color: #ff0000;"></i>
+  tasks.innerHTML += `
+  <li class="list-group-item list-group-item-action list-group-item-warning d-flex justify-content-between">
+    ${task_input.value}
+    <i class="fa-solid fa-trash-can"  style="color: #ff0000;"></i>
   </li>`;
 }
 
@@ -30,7 +32,7 @@ function focusOnInput() {
 function counter() {
   tasks_counter.innerHTML = tasks.children.length;
 }
-function finishetask() {
+function finishTask() {
   for (let index = 0; index < tasks.children.length; index++) {
     const task = tasks.children[index];
     task.onclick = function () {
